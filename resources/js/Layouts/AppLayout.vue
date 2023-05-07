@@ -51,6 +51,12 @@ const logout = () => {
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Deudas
                                 </NavLink>
+                                <NavLink :href="route('new')" :active="route().current('new')">
+                                    New
+                                </NavLink>
+                                <NavLink :href="route('app')" :active="route().current('app')">
+                                    App
+                                </NavLink>
                             </div>
                         </div>
 
@@ -194,10 +200,14 @@ const logout = () => {
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                            Deudas
                         </ResponsiveNavLink>
                     </div>
-
+                    <div class="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                            New
+                        </ResponsiveNavLink>
+                    </div>
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
                         <div class="flex items-center px-4">
@@ -276,14 +286,14 @@ const logout = () => {
             </nav>
 
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow">
+            <header v-if="$slots.header" class="bg-dark dark:bg-gray-800 shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <slot name="header" />
                 </div>
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-dark dark:bg-gray-800 shadow">
                 <slot />
             </main>
         </div>

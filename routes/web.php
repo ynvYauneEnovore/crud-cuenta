@@ -32,4 +32,15 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    Route::get('/new', function () {
+        return Inertia::render('New');
+    })->name('new');
+    Route::get('/app', function () {
+        return Inertia::render('App');
+    })->name('app');
+});
+
+Route::get('/deudas', function () {
+    $deudas = App\Models\Deudas::all();
+    return response()->json($deudas);
 });
