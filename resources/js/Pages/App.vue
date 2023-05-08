@@ -8,7 +8,7 @@ import App from '@/Components/App.vue';
         <template #header>
 
                 <h2 class="font-semibold text-xl text-white">
-                App
+                Apps
             </h2>
         </template>
         <div class="py-12">
